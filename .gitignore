@@ -40,3 +40,4 @@ application.yml
 *.swp
 *.bak
 *.old
+src/main/resources/application.properties
