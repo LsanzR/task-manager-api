@@ -76,6 +76,8 @@ public class TaskRepositoryTest {
 
         // Assert
         assertThat(result.getTotalElements()).isEqualTo(2);
+
+        // Verificar titulos de las tareas
         assertThat(result.getContent()
                 .stream()
                 .map(Task::getTitle)
