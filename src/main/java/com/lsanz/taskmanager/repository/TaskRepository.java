@@ -8,10 +8,14 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;
 
+
 public interface TaskRepository extends JpaRepository<Task, Long> {
 
     // Listar por estado
     Page<Task> findByStatus(TaskStatus status, Pageable pageable);
+
+    // Listar por fecha
+    Page<Task> findByDueDate(LocalDate dueDate, Pageable pageable);
 
     // Listar por usuario
     Page<Task> findByUserId(Long userId, Pageable pageable);
